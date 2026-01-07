@@ -26,6 +26,145 @@
       width: 100%;
     }
     }
+
+    /* =====================================
+   FULL RESPONSIVE FIX – INPUT TAŞMALARI
+   (HTML DEĞİŞMEDEN)
+   ===================================== */
+
+/* Tablet ve telefon */
+@media (max-width: 992px) {
+
+  /* Float'ları iptal et */
+  .col-6 > div {
+    float: none !important;
+  }
+
+  /* Tüm input grupları */
+  .input-group {
+    width: 95% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Selectler */
+  .form-select {
+    width: 100% !important;
+  }
+
+  /* Tek satır input (telefon, TC, ad, soyad) */
+  input.form-control {
+    width: 100% !important;
+  }
+
+  /* E-posta ve textarea */
+  .form-floating,
+  .form-floating textarea {
+    width: 95% !important;
+  }
+
+  /* Margin-right ile kaymış label yazıları */
+  p[style*="margin-right"] {
+    margin-right: 0 !important;
+    text-align: center;
+  }
+
+  /* Kişisel bilgiler başlıkları */
+  p img {
+    display: inline-block;
+    margin-bottom: 4px;
+  }
+
+  /* Büyük buton */
+  button[style*="width: 500px"] {
+    width: 95% !important;
+  }
+}
+
+/* TELEFON (küçük ekran) */
+@media (max-width: 576px) {
+
+  /* Her şey tek kolon */
+  .col-6,
+  .col-12 {
+    width: 100% !important;
+  }
+
+  /* Input container */
+  .input-group {
+    width: 100% !important;
+  }
+
+  /* Telefon input kesin sığsın */
+  input[placeholder*="0555"],
+  input[placeholder*="Telefon"] {
+    max-width: 100% !important;
+  }
+
+  /* Yazılar küçülsün */
+  p {
+    font-size: 14px !important;
+  }
+
+  /* Modal */
+  .modal-dialog {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 991px) {
+
+  .navbar-collapse {
+    background: #fff;
+    padding: 15px 0;
+  }
+
+  .navbar-nav,
+  .navbar-collapse form {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  .navbar-collapse a {
+    margin: 8px 0 !important;
+    font-size: 16px;
+  }
+
+  .navbar-collapse .btn-primary {
+    width: 90%;
+    margin: 12px 0 0 0 !important;
+    border-radius: 12px;
+  }
+
+@media (max-width: 991px) {
+
+  .navbar-collapse {
+    background: #fff;
+    padding: 15px 0;
+  }
+
+  .navbar-nav,
+  .navbar-collapse form {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  .navbar-collapse a {
+    margin: 8px 0 !important;
+    font-size: 16px;
+  }
+
+  .navbar-collapse .btn-primary {
+    width: 90%;
+    margin: 12px 0 0 0 !important;
+    border-radius: 12px;
+  }
+}
+
     </style>
 
 
@@ -36,21 +175,40 @@
     
 
 
-    <nav class="navbar sticky-top bg-white" style=" box-shadow: 0 8px 25px rgba(0,0,0,0.2)">
+    <nav class="navbar navbar-expand-lg sticky-top bg-white"
+     style="box-shadow: 0 8px 25px rgba(0,0,0,0.2)">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#" style="color: #0360AD; font-family: monospace;">
-      <img src="..\assets\images\logos\koyumaviesit.png" style="height: 80px; width: 80px; border-radius: 100%; margin-right: 30px; margin-left: 100px;  margin-top: 0px;">
+
+    <a class="navbar-brand" href="#" style="color:#0360AD;font-family:monospace;">
+      <img src="../assets/images/logos/koyumaviesit.png"
+           style="height:80px;width:80px;border-radius:100%;margin-right:30px;margin-left:100px;">
       Randevum
     </a>
-    <form class="d-flex" role="search" style="margin-right: 90px; margin-bottom: 6px">
-       <a href="..\index.html" class="btn btn-link btn-hover-color ms-3"> Anasayfa </a>
-       <a href="hakkimda.html" class="btn btn-link btn-hover-color ms-3"> Hakkımda </a>
-         <a href="birimlerimiz.html" class="btn btn-link btn-hover-color ms-3"> Birimlerimiz </a>
-         <a href="randevual.html" class="btn btn-link btn-hover-color ms-3"> Randevu Al </a>
-         <a class="btn btn-primary" href="giris.html" role="button" style="margin-left: 25px; border-radius: 15px">Giriş Yap</a>
-      </form>
-  </div>
 
+    <!-- HAMBURGER -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- COLLAPSE -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+      <form class="d-flex align-items-center" role="search"
+            style="margin-right:5.5%;margin-bottom:6px">
+        <a href="../index.html" class="btn btn-link btn-hover-color ms-3">Anasayfa</a>
+        <a href="hakkimda.html" class="btn btn-link btn-hover-color ms-3">Hakkımda</a>
+        <a href="birimlerimiz.html" class="btn btn-link btn-hover-color ms-3">Birimlerimiz</a>
+        <a href="randevual.html" class="btn btn-link btn-hover-color ms-3">Randevu Al</a>
+        <a class="btn btn-primary"
+           href="giris.html"
+           style="margin-left:25px;border-radius:15px">
+          Giriş Yap
+        </a>
+      </form>
+    </div>
+
+  </div>
 </nav>
 
 
