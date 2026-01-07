@@ -1,15 +1,38 @@
-
 <!doctype html>
 <html lang="en">
   <head>
 
-    <link rel="icon" type="image/css" href="koyumaviesit.png">
+    <link rel="icon" type="image/css" href="assets\images\logos\koyumaviesit.png">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <style>
+
+      
+.navbar .nav-link {
+  color: #000;
+  transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: #0360AD;
+}
+
+.navbar .btn-primary {
+  background-color: #0360AD;
+  border-color: #0360AD;
+  transition: background-color 0.2s ease;
+}
+
+.navbar .btn-primary:hover {
+  background-color: #024a87;
+  border-color: #024a87;
+}
+
+
     .btn-hover-color {
       color: #000 !important;
       transition: color 200ms ease;
@@ -23,8 +46,8 @@
     }
 
     .navbar {
-    	height: 100px;
-    	width: 100%;
+      height: 100px;
+      width: 100%;
     }
 
     .kart:hover{
@@ -32,43 +55,210 @@
         }
 
     .mb-3 {
-    	 box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+       box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     }
 
+    @media (max-width: 1200px) {
+  .kart {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    float: none !important;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .navbar-brand img {
+    margin-left: 10px !important;
+  }
+
+  form.d-flex {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 0 !important;
+  }
+
+  .col-12[style*="banner"] h4,
+  .col-12[style*="banner"] p,
+  .col-12[style*="banner"] a {
+    padding-left: 20px !important;
+    margin-left: 20px !important;
+  }
+
+  .col-7,
+  .col-5 {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  .col-5 img {
+    margin-right: 0 !important;
+    width: 90%;
+  }
+
+  .col-3 {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+
+  .kart {
+    margin: auto !important;
+  }
+
+  .col-6 {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 20px;
+  }
+
+  .col-4 {
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@media (max-width: 576px) {
+
+  h4 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .btn {
+    width: 90% !important;
+    margin-bottom: 10px;
+  }
+
+  .navbar {
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar-brand {
+    text-align: center;
+    width: 100%;
+  }
+
+
+}
+
+navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+@media (max-width: 991px) {
+
+  .navbar-collapse {
+    background: #fff;
+    padding: 15px 0;
+  }
+
+  .navbar-nav,
+  .navbar-collapse form {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  .navbar-collapse a {
+    margin: 8px 0 !important;
+    font-size: 16px;
+  }
+
+  .navbar-collapse .btn-primary {
+    width: 90%;
+    margin: 12px 0 0 0 !important;
+    border-radius: 12px;
+  }
+
+@media (max-width: 991px) {
+
+  .navbar-collapse {
+    background: #fff;
+    padding: 15px 0;
+  }
+
+  .navbar-nav,
+  .navbar-collapse form {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  .navbar-collapse a {
+    margin: 8px 0 !important;
+    font-size: 16px;
+  }
+
+  .navbar-collapse .btn-primary {
+    width: 90%;
+    margin: 12px 0 0 0 !important;
+    border-radius: 12px;
+  }
+}
 
   </style>
   </head>
   <body>
 
-  			 	<nav class="navbar sticky-top bg-white" style=" box-shadow: 0 8px 25px rgba(0,0,0,0.4)">
+          <nav class="navbar navbar-expand-lg sticky-top bg-white"
+     style="box-shadow: 0 8px 25px rgba(0,0,0,0.2)">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#" style="color: #0360AD; font-family: monospace;">
-      <img src="koyumaviesit.png" style="height: 80px; width: 80px; border-radius: 100%; margin-right: 30px; margin-left: 100px;  margin-top: 0px">
+
+    <a class="navbar-brand" href="#" style="color:#0360AD;font-family:monospace;">
+      <img src="assets/images/logos/koyumaviesit.png"
+           style="height:80px;width:80px;border-radius:100%;margin-right:30px;margin-left:100px;">
       Randevum
     </a>
-    <form class="d-flex" role="search" style="margin-right: 90px; margin-bottom: 6px">
-    	 <a href="index.html" class="btn btn-link btn-hover-color ms-3"> Anasayfa </a>
-    	 <a href="hakkimda.html" class="btn btn-link btn-hover-color ms-3"> Hakkımda </a>
-      	 <a href="birimlerimiz.html" class="btn btn-link btn-hover-color ms-3"> Birimlerimiz </a>
-      	 <a href="randevual.html" class="btn btn-link btn-hover-color ms-3"> Randevu Al </a>
-      	 <a class="btn btn-primary" href="giris.html" role="button" style="margin-left: 25px; border-radius: 15px">Giriş Yap</a>
-      </form>
-  </div>
 
+    <!-- HAMBURGER -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- COLLAPSE -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+      <form class="d-flex align-items-center" role="search"
+            style="margin-right:5.5%;margin-bottom:6px">
+        <a href="index.html" class="btn btn-link btn-hover-color ms-3">Anasayfa</a>
+        <a href="pages\hakkimda.html" class="btn btn-link btn-hover-color ms-3">Hakkımda</a>
+        <a href="pages\birimlerimiz.html" class="btn btn-link btn-hover-color ms-3">Birimlerimiz</a>
+        <a href="pages\randevual.html" class="btn btn-link btn-hover-color ms-3">Randevu Al</a>
+        <a class="btn btn-primary"
+           href="pages\giris.html"
+           style="margin-left:25px;border-radius:15px">
+          Giriş Yap
+        </a>
+      </form>
+    </div>
+
+  </div>
 </nav>
 
-  			 </div>
-  		</div>  
-  		<div class="container-fluid">
+         </div>
+      </div>  
+      <div class="container-fluid">
 
-  		<div class="row">
-  			<div class="col-12" style="background-image: url('banner.png'); color: white;">
-  				<h4 style="padding-bottom: 15px; padding-top: 120px; padding-left: 300px"> Sağlığınız İçin En İyi Hizmet </h4>
-  				<p style="font-family: Segoe UI;  padding-left: 300px;"> Modern teknoloji ve uzman kadromuz ile sağlığınız için en kaliteli hizmeti sunuyoruz. Randevum ile pratik ve hızlı randevu alabilirsiniz. </p>
-  				<a class="btn btn-primary shadow-lg" href="#" role="button" style="margin-left: 300px; width: 200px; font-size: 17px; height: 50px; padding-top: 12px;  margin-bottom: 130px; margin-top: 70px"> Hemen Randevu Al! </a>
-  				<a class="btn btn-light shadow-lg" href="#oneri" role="button" style="margin-left: 20px; width: 150px; font-size: 17px; height: 50px; padding-top: 12px;  margin-bottom: 130px; margin-top: 70px; color: #0360AD"> Önerileriniz </a>
-  			</div>
-  		</div>
+      <div class="row">
+        <div class="col-12" style="background-image: url('assets/images/photos/banner.png'); color: white;">
+          <h4 style="padding-bottom: 15px; padding-top: 120px; padding-left: 300px"> Sağlığınız İçin En İyi Hizmet </h4>
+          <p style="font-family: Segoe UI;  padding-left: 300px;"> Modern teknoloji ve uzman kadromuz ile sağlığınız için en kaliteli hizmeti sunuyoruz. Randevum ile pratik ve hızlı randevu alabilirsiniz. </p>
+          <a class="btn btn-primary shadow-lg" href="pages\randevual.html" role="button" style="margin-left: 300px; width: 200px; font-size: 17px; height: 50px; padding-top: 12px;  margin-bottom: 130px; margin-top: 70px"> Hemen Randevu Al! </a>
+          <a class="btn btn-light shadow-lg" href="#oneri" role="button" style="margin-left: 20px; width: 150px; font-size: 17px; height: 50px; padding-top: 12px;  margin-bottom: 130px; margin-top: 70px; color: #0360AD"> Önerileriniz </a>
+        </div>
+      </div>
 
 
 
@@ -86,7 +276,7 @@
         </div>
 
         <div class="col-5" style="text-align: center">
-          <img src="havalidoktor.jpg" style="margin-top: 65px; border-radius: 20px; margin-right: 110px;">
+          <img src="assets\images\photos\havalidoktor.jpg" style="margin-top: 65px; border-radius: 20px; margin-right: 110px;">
         </div> 
 
       </div>
@@ -97,55 +287,55 @@
 
 
 
-  		<div class="row">
-  			<div class="col-12" style="padding-bottom: 50px">
-  				<h4 style="color: #0360AD; font-family: Segoe UI; text-align: center; padding-top: 100px"> Neden Bizi Tercih Etmelisiniz? </h4>
-  				<p style="text-align: center; padding-top: 15px; padding-bottom: 30px"> Müşteri memnuniyeti odaklı hizmet anlayışımız ve modern altyapımız ile sağlık hizmetlerinde </br> fark yaratıyoruz. </p>
-  			</div>
-  		</div>
+      <div class="row">
+        <div class="col-12" style="padding-bottom: 50px">
+          <h4 style="color: #0360AD; font-family: Segoe UI; text-align: center; padding-top: 100px"> Neden Bizi Tercih Etmelisiniz? </h4>
+          <p style="text-align: center; padding-top: 15px; padding-bottom: 30px"> Müşteri memnuniyeti odaklı hizmet anlayışımız ve modern altyapımız ile sağlık hizmetlerinde </br> fark yaratıyoruz. </p>
+        </div>
+      </div>
 
-  		<div class="row">
-  			<div class="col-3">
-  				<div class="kart" style="width: 300px; height: 210px; background-color: white; box-shadow: 0 8px 25px rgba(0,0,0,0.5); border-radius: 20px; margin-left: 270px;">
-  					<img src="notdefteri.png" style="width: 60px; height: 60px; margin-top: 20px; margin-left: 20px">
-  					<p style="font-size: 20px; margin-top: 10px; margin-left: 20px"> Online Randevu Sistemi </p>
-  					<p style="opacity: 0.9; margin-left: 20px"> Sahip olduğumuz online randevu sistemi ile vakit kaybınızı önlüyoruz. </p>
-  				</div>
-  			</div>
-  			<div class="col-3">
-  				<div class="kart" style="width: 300px; height: 210px; background-color: white; box-shadow: 0 8px 25px rgba(0,0,0,0.5); border-radius: 20px; margin-left: 145px">
-  					<img src="adam.png" style="width: 60px; height: 60px; margin-left: 20px; margin-top: 20px">
-  					<p style="font-size: 20px; margin-left: 20px; margin-top: 10px;"> Uzman Kadro </p>
-  					<p style="margin-left: 20px; opacity: 0.9"> Alanlarında profesyonel doktorlarımız-  la beraber sağlığınız güvende. </p>
-  				</div>
-  			</div>
-  			<div class="col-3">
-  				<div class="kart" style="float: right; width: 300px; height: 210px; background-color: white; box-shadow: 0 8px 25px rgba(0,0,0,0.5); border-radius: 20px; margin-right: 134px">
-  					<img src="bina.png" style="width: 60px; height: 60px; margin-left: 20px; margin-top: 20px">
-  					<p style="font-size: 20px; margin-left: 20px; margin-top: 10px;"> Modern Tesisler </p>
-  					<p style="margin-left: 20px; opacity: 0.9"> Tesisler son teknolojiye sahip tıbbi ekipmanlarla birlikte donatılmıştır. </p>
-  				</div>
-  			</div>
-  			<div class="col-3">
-  				<div class="kart" style="float: right; width: 300px; height: 210px; background-color: white; box-shadow: 0 8px 25px rgba(0,0,0,0.5); border-radius: 20px; margin-right: 260px">
-  					<img src="saat.png" style="width: 60px; height: 60px; margin-left: 20px; margin-top: 20px">
-  					<p style="font-size: 20px; margin-left: 20px; margin-top: 10px;"> 7/24 Hizmet </p>
-  					<p style="margin-left: 20px; opacity: 0.9"> Acil servisimiz ve online sistemimiz her zaman hizmetinizde. </p>
-  				</div>
-  			</div>
+      <div class="row">
+        <div class="col-3">
+          <div class="kart" style="width: 300px; height: 210px; background-color: white; box-shadow: 0 8px 25px rgba(0,0,0,0.5); border-radius: 20px; margin-left: 270px;">
+            <img src="assets\images\photos\notdefteri.png" style="width: 60px; height: 60px; margin-top: 20px; margin-left: 20px">
+            <p style="font-size: 20px; margin-top: 10px; margin-left: 20px"> Online Randevu Sistemi </p>
+            <p style="opacity: 0.9; margin-left: 20px"> Sahip olduğumuz online randevu sistemi ile vakit kaybınızı önlüyoruz. </p>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="kart" style="width: 300px; height: 210px; background-color: white; box-shadow: 0 8px 25px rgba(0,0,0,0.5); border-radius: 20px; margin-left: 145px">
+            <img src="assets\images\photos\adam.png" style="width: 60px; height: 60px; margin-left: 20px; margin-top: 20px">
+            <p style="font-size: 20px; margin-left: 20px; margin-top: 10px;"> Uzman Kadro </p>
+            <p style="margin-left: 20px; opacity: 0.9"> Alanlarında profesyonel doktorlarımız-  la beraber sağlığınız güvende. </p>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="kart" style="float: right; width: 300px; height: 210px; background-color: white; box-shadow: 0 8px 25px rgba(0,0,0,0.5); border-radius: 20px; margin-right: 134px">
+            <img src="assets\images\photos\bina.png" style="width: 60px; height: 60px; margin-left: 20px; margin-top: 20px">
+            <p style="font-size: 20px; margin-left: 20px; margin-top: 10px;"> Modern Tesisler </p>
+            <p style="margin-left: 20px; opacity: 0.9"> Tesisler son teknolojiye sahip tıbbi ekipmanlarla birlikte donatılmıştır. </p>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="kart" style="float: right; width: 300px; height: 210px; background-color: white; box-shadow: 0 8px 25px rgba(0,0,0,0.5); border-radius: 20px; margin-right: 260px">
+            <img src="assets\images\photos\saat.png" style="width: 60px; height: 60px; margin-left: 20px; margin-top: 20px">
+            <p style="font-size: 20px; margin-left: 20px; margin-top: 10px;"> 7/24 Hizmet </p>
+            <p style="margin-left: 20px; opacity: 0.9"> Acil servisimiz ve online sistemimiz her zaman hizmetinizde. </p>
+          </div>
+        </div>
 
-  		</div>
-  	    </br> </br> </br>
-  		<hr id="oneri">
-  	    </br> </br> </br>
+      </div>
+        </br> </br> </br>
+      <hr id="oneri">
+        </br> </br> </br>
 
-  	    <div class="row">
-  	    	<div class="col-12"> <p style="font-size: 30px; padding-top: 20px; text-align: center;"> Önerileriniz & Yorumlarınız </p> </div> 
-		</div>
+        <div class="row">
+          <div class="col-12"> <p style="font-size: 30px; padding-top: 20px; text-align: center;"> Önerileriniz & Yorumlarınız </p> </div> 
+    </div>
 
-		<div class="row">
-			<div class="col-6" style="margin-left: 500px; margin-bottom: 100px">
-				<div class="mb-3">
+    <div class="row">
+      <div class="col-6" style="margin-left: 500px; margin-bottom: 100px">
+        <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Ad Soyad</label>
   <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Adınızı ve Soyadınızı Giriniz">
 </div>
@@ -180,51 +370,67 @@
   </div>
 </div>
 
-  	    </div>
+        </div>
 
         </br> </br> </br>
       <hr>
         </br> </br> </br>
 
 
-  	    <div class="row">
-  	    	<div class="col-12">
-  	    		<p style="color: #06508F; font-size: 30px; text-align: center"> İletişim Bilgileri </p>
-  	    	</div>
-  	    </div>
+        <div class="row">
+          <div class="col-12">
+            <p style="color: #06508F; font-size: 30px; text-align: center"> İletişim Bilgileri </p>
+          </div>
+        </div>
 
-  	    <div class="row">
-  	    	<div class="col-4" style="text-align: center; padding-left: 480px">
-  	    		<img src="telefon.png" style="width: 70px; height: 70px; margin-top: 50px">
-  	    		<p style="font-size: 20px; padding-top: 10px"> Telefon </p>
-  	    		<p style="padding-bottom: 30px"> 0232 053 53 53 </p>
-  	    	</div>
+        <div class="row">
+          <div class="col-4" style="text-align: center; padding-left: 480px">
+            <img src="assets\images\photos\telefon.png" style="width: 70px; height: 70px; margin-top: 50px">
+            <p style="font-size: 20px; padding-top: 10px"> Telefon </p>
+            <p style="padding-bottom: 30px"> 0232 053 53 53 </p>
+          </div>
 
-  	    	<div class="col-4" style="text-align: center;">
-  	    		<img src="konum.png" style="width: 70px; height: 70px; margin-top: 50px">
-  	    		<p style="font-size: 20px; padding-top: 10px"> Adres </p>
-  	    		<p style="padding-bottom: 30px"> İzmir, Türkiye </p>
-  	    	</div>
+          <div class="col-4" style="text-align: center;">
+            <img src="assets\images\photos\konum.png" style="width: 70px; height: 70px; margin-top: 50px">
+            <p style="font-size: 20px; padding-top: 10px"> Adres </p>
+            <p style="padding-bottom: 30px"> İzmir, Türkiye </p>
+          </div>
 
-  	    	<div class="col-4" style="text-align: center; padding-right: 450px">
-  	    		<img src="saat.png" style="width: 70px; height: 70px; margin-top: 50px">
-  	    		<p style="font-size: 20px; padding-top: 10px"> Çalışma Saatleri </p>
-  	    		<p style="padding-bottom: 30px"> 7/24 Hizmet </p>
-  	    	</div>
-  	    </div>
+          <div class="col-4" style="text-align: center; padding-right: 450px">
+            <img src="assets\images\photos\saat.png" style="width: 70px; height: 70px; margin-top: 50px">
+            <p style="font-size: 20px; padding-top: 10px"> Çalışma Saatleri </p>
+            <p style="padding-bottom: 30px"> 7/24 Hizmet </p>
+          </div>
+        </div>
 
 
 
-  	    <div class="row"></div>
+        <div class="row"></div>
 
-  	    <div class="row">
-  	    	<div class="col-12" style="background-color: #0360AD; text-align: center; color: white; font-family: Righteous; font-size: 30px">
-  	    		<p style="padding-top: 80px"> Randevu Almaya Hazır Mısın? </p>
-  	    		<p style="font-size: 20px; opacity: 0.5; font-family: Segoe UI; padding-top: 15px"> Online randevu sistemimizi kullanarak hemen randevu oluşturun </p>
-  	    		<button type="button" class="btn btn-outline-light" style="font-family: Segoe UI; width: 200px; height: 50px; margin-top: 30px; margin-bottom: 60px"> Randevu Oluşturun </button>
-  	    	</div>
-  		</div>
+        <div class="row">
+          <div class="col-12" style="background-color: #0360AD; text-align: center; color: white; font-family: Righteous; font-size: 30px">
+            <p style="padding-top: 80px"> Randevu Almaya Hazır Mısın? </p>
+            <p style="font-size: 20px; opacity: 0.5; font-family: Segoe UI; padding-top: 15px"> Online randevu sistemimizi kullanarak hemen randevu oluşturun </p>
+            <a type="button" class="btn btn-outline-light" href="pages\randevual.html" style="font-family: Segoe UI; width: 200px; height: 50px; margin-top: 30px; margin-bottom: 60px; padding-top: 12px"> Randevu Oluşturun </a>
+          </div>
+      </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
