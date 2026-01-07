@@ -9,48 +9,230 @@
 
     <style>
       .btn-hover-color {
-      color: #000 !important;
-      transition: color 200ms ease;
-      text-decoration: none;
-    }
-    .btn-hover-color:hover,
-    .btn-hover-color:focus,
-    .btn-hover-color:active {
-      color: #0360AD !important;
-      text-decoration: none;
-    }
+  color: #000 !important;
+  transition: color 200ms ease;
+  text-decoration: none;
+}
 
-    .navbar {
-      height: 100px;
-      width: 100%;
-    }
+.btn-hover-color:hover,
+.btn-hover-color:focus,
+.btn-hover-color:active {
+  color: #0360AD !important;
+  text-decoration: none;
+}
+
+.navbar {
+  height: 100px;
+  width: 100%;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
 
     .sonYazi {
      background: linear-gradient(90deg,rgba(23, 61, 130, 1) 0%, rgba(109, 143, 163, 1) 99%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     }
+
+    @media (max-width: 992px) {
+
+
+  .navbar {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .navbar-brand img {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+  }
+
+  .navbar form {
+    margin-right: 0 !important;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+
+  .container-fluid > .row > .col-12[style*="padding-left: 300px"] {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    text-align: center;
+  }
+
+
+  .col-6 {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  .col-6 p {
+    padding-left: 0 !important;
+  }
+
+
+  img[style*="width: 700px"] {
+    width: 90% !important;
+    height: auto !important;
+    margin-left: 0 !important;
+    margin-top: 20px;
+  }
+}
+
+
+@media (max-width: 576px) {
+
+  h4 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+
+  .btn-link {
+    font-size: 15px;
+    margin: 6px 0 !important;
+  }
+
+  .btn-primary {
+    width: 90%;
+    margin: 10px 0 !important;
+  }
+
+
+  .sonYazi {
+    font-size: 18px !important;
+    padding: 30px 15px !important;
+  }
+}
+
+.btn-hover-color {
+  color: #000 !important;
+  transition: color 200ms ease;
+  text-decoration: none;
+}
+
+.btn-hover-color:hover,
+.btn-hover-color:focus,
+.btn-hover-color:active {
+  color: #0360AD !important;
+  text-decoration: none;
+}
+
+.navbar {
+  height: 100px;
+  width: 100%;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+@media (max-width: 991px) {
+
+  .navbar-collapse {
+    background: #fff;
+    padding: 15px 0;
+  }
+
+  .navbar-nav,
+  .navbar-collapse form {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  .navbar-collapse a {
+    margin: 8px 0 !important;
+    font-size: 16px;
+  }
+
+  .navbar-collapse .btn-primary {
+    width: 90%;
+    margin: 12px 0 0 0 !important;
+    border-radius: 12px;
+  }
+
+@media (max-width: 991px) {
+
+  .navbar-collapse {
+    background: #fff;
+    padding: 15px 0;
+  }
+
+  .navbar-nav,
+  .navbar-collapse form {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  .navbar-collapse a {
+    margin: 8px 0 !important;
+    font-size: 16px;
+  }
+
+  .navbar-collapse .btn-primary {
+    width: 90%;
+    margin: 12px 0 0 0 !important;
+    border-radius: 12px;
+  }
+}
     </style>
 
 
   </head>
   <body>
     
-      <nav class="navbar sticky-top bg-white" style=" box-shadow: 0 8px 25px rgba(0,0,0,0.2)">
+      <nav class="navbar navbar-expand-lg sticky-top bg-white"
+     style="box-shadow: 0 8px 25px rgba(0,0,0,0.2)">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#" style="color: #0360AD; font-family: monospace;">
-      <img src="..\assets\images\logos\koyumaviesit.png" style="height: 80px; width: 80px; border-radius: 100%; margin-right: 30px; margin-left: 100px;  margin-top: 0px;">
+
+    <a class="navbar-brand" href="#" style="color:#0360AD;font-family:monospace;">
+      <img src="../assets/images/logos/koyumaviesit.png"
+           style="height:80px;width:80px;border-radius:100%;margin-right:30px;margin-left:100px;">
       Randevum
     </a>
-    <form class="d-flex" role="search" style="margin-right: 90px; margin-bottom: 6px">
-       <a href="..\index.html" class="btn btn-link btn-hover-color ms-3"> Anasayfa </a>
-       <a href="hakkimda.html" class="btn btn-link btn-hover-color ms-3"> Hakkımda </a>
-         <a href="birimlerimiz.html" class="btn btn-link btn-hover-color ms-3"> Birimlerimiz </a>
-         <a href="randevual.html" class="btn btn-link btn-hover-color ms-3"> Randevu Al </a>
-         <a class="btn btn-primary" href="giris.html" role="button" style="margin-left: 25px; border-radius: 15px">Giriş Yap</a>
-      </form>
-  </div>
 
+    <!-- HAMBURGER -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- COLLAPSE -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+      <form class="d-flex align-items-center" role="search"
+            style="margin-right:5.5%;margin-bottom:6px">
+        <a href="../index.html" class="btn btn-link btn-hover-color ms-3">Anasayfa</a>
+        <a href="hakkimda.html" class="btn btn-link btn-hover-color ms-3">Hakkımda</a>
+        <a href="birimlerimiz.html" class="btn btn-link btn-hover-color ms-3">Birimlerimiz</a>
+        <a href="randevual.html" class="btn btn-link btn-hover-color ms-3">Randevu Al</a>
+        <a class="btn btn-primary"
+           href="giris.html"
+           style="margin-left:25px;border-radius:15px">
+          Giriş Yap
+        </a>
+      </form>
+    </div>
+
+  </div>
 </nav>
 
 <div class="container-fluid">
