@@ -3,433 +3,336 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Randevu</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
-
+    <link rel="icon" type="image/css" href="..\assets\images\logos\koyumaviesit.png">
 
     <style>
       .btn-hover-color {
-      color: #000 !important;
-      transition: color 200ms ease;
-      text-decoration: none;
-    }
-    .btn-hover-color:hover,
-    .btn-hover-color:focus,
-    .btn-hover-color:active {
-      color: #0360AD !important;
-      text-decoration: none;
-    }
+        color: #000 !important;
+        transition: color 200ms ease;
+        text-decoration: none;
+      }
+      .btn-hover-color:hover,
+      .btn-hover-color:focus,
+      .btn-hover-color:active {
+        color: #0360AD !important;
+        text-decoration: none;
+      }
 
-    .navbar {
-      height: 100px;
-      width: 100%;
-    }
-    }
+      .navbar {
+        height: 100px;
+        width: 100%;
+      }
 
-    /* =====================================
-   FULL RESPONSIVE FIX – INPUT TAŞMALARI
-   (HTML DEĞİŞMEDEN)
-   ===================================== */
 
-/* Tablet ve telefon */
-@media (max-width: 992px) {
+      @media (max-width: 992px) {
+        .col-6 > div {
+          float: none !important;
+          margin: auto !important;
+        }
 
-  /* Float'ları iptal et */
-  .col-6 > div {
-    float: none !important;
-  }
+        .input-group {
+          width: 95% !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
 
-  /* Tüm input grupları */
-  .input-group {
-    width: 95% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
+        .form-select {
+          width: 100% !important;
+        }
 
-  /* Selectler */
-  .form-select {
-    width: 100% !important;
-  }
+        input.form-control {
+          width: 100% !important;
+        }
 
-  /* Tek satır input (telefon, TC, ad, soyad) */
-  input.form-control {
-    width: 100% !important;
-  }
+        .form-floating,
+        .form-floating textarea {
+          width: 95% !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
 
-  /* E-posta ve textarea */
-  .form-floating,
-  .form-floating textarea {
-    width: 95% !important;
-  }
+        p[style*="margin-right"] {
+          margin-right: 0 !important;
+          text-align: center;
+        }
 
-  /* Margin-right ile kaymış label yazıları */
-  p[style*="margin-right"] {
-    margin-right: 0 !important;
-    text-align: center;
-  }
+        p img {
+          display: inline-block;
+          margin-bottom: 4px;
+        }
 
-  /* Kişisel bilgiler başlıkları */
-  p img {
-    display: inline-block;
-    margin-bottom: 4px;
-  }
+        button[style*="width: 500px"] {
+          width: 95% !important;
+        }
+      }
 
-  /* Büyük buton */
-  button[style*="width: 500px"] {
-    width: 95% !important;
-  }
-}
+      @media (max-width: 576px) {
+        .col-6,
+        .col-12 {
+          width: 100% !important;
+        }
 
-/* TELEFON (küçük ekran) */
-@media (max-width: 576px) {
+        .input-group {
+          width: 100% !important;
+        }
 
-  /* Her şey tek kolon */
-  .col-6,
-  .col-12 {
-    width: 100% !important;
-  }
+        input[placeholder*="0555"],
+        input[placeholder*="Telefon"] {
+          max-width: 100% !important;
+        }
 
-  /* Input container */
-  .input-group {
-    width: 100% !important;
-  }
+        p {
+          font-size: 14px !important;
+        }
 
-  /* Telefon input kesin sığsın */
-  input[placeholder*="0555"],
-  input[placeholder*="Telefon"] {
-    max-width: 100% !important;
-  }
+        .modal-dialog {
+          margin: 10px;
+        }
+      }
 
-  /* Yazılar küçülsün */
-  p {
-    font-size: 14px !important;
-  }
+      @media (max-width: 991px) {
+        .navbar-collapse {
+          background: #fff;
+          padding: 15px 0;
+        }
 
-  /* Modal */
-  .modal-dialog {
-    margin: 10px;
-  }
-}
+        .navbar-nav,
+        .navbar-collapse form {
+          flex-direction: column !important;
+          align-items: center !important;
+          width: 100%;
+          margin: 0 !important;
+        }
 
-@media (max-width: 991px) {
+        .navbar-collapse a {
+          margin: 8px 0 !important;
+          font-size: 16px;
+        }
 
-  .navbar-collapse {
-    background: #fff;
-    padding: 15px 0;
-  }
-
-  .navbar-nav,
-  .navbar-collapse form {
-    flex-direction: column !important;
-    align-items: center !important;
-    width: 100%;
-    margin: 0 !important;
-  }
-
-  .navbar-collapse a {
-    margin: 8px 0 !important;
-    font-size: 16px;
-  }
-
-  .navbar-collapse .btn-primary {
-    width: 90%;
-    margin: 12px 0 0 0 !important;
-    border-radius: 12px;
-  }
-
-@media (max-width: 991px) {
-
-  .navbar-collapse {
-    background: #fff;
-    padding: 15px 0;
-  }
-
-  .navbar-nav,
-  .navbar-collapse form {
-    flex-direction: column !important;
-    align-items: center !important;
-    width: 100%;
-    margin: 0 !important;
-  }
-
-  .navbar-collapse a {
-    margin: 8px 0 !important;
-    font-size: 16px;
-  }
-
-  .navbar-collapse .btn-primary {
-    width: 90%;
-    margin: 12px 0 0 0 !important;
-    border-radius: 12px;
-  }
-}
-
+        .navbar-collapse .btn-primary {
+          width: 90%;
+          margin: 12px 0 0 0 !important;
+          border-radius: 12px;
+        }
+      }
     </style>
-
-
-
-
   </head>
   <body>
-    
 
+    <nav class="navbar navbar-expand-lg sticky-top bg-white" style="box-shadow: 0 8px 25px rgba(0,0,0,0.2)">
+      <div class="container-fluid">
 
-    <nav class="navbar navbar-expand-lg sticky-top bg-white"
-     style="box-shadow: 0 8px 25px rgba(0,0,0,0.2)">
-  <div class="container-fluid">
-
-    <a class="navbar-brand" href="#" style="color:#0360AD;font-family:monospace;">
-      <img src="../assets/images/logos/koyumaviesit.png"
-           style="height:80px;width:80px;border-radius:100%;margin-right:30px;margin-left:100px;">
-      Randevum
-    </a>
-
-    <!-- HAMBURGER -->
-    <button class="navbar-toggler" type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- COLLAPSE -->
-    <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
-      <form class="d-flex align-items-center" role="search"
-            style="margin-right:5.5%;margin-bottom:6px">
-        <a href="../index.html" class="btn btn-link btn-hover-color ms-3">Anasayfa</a>
-        <a href="hakkimda.html" class="btn btn-link btn-hover-color ms-3">Hakkımda</a>
-        <a href="birimlerimiz.html" class="btn btn-link btn-hover-color ms-3">Birimlerimiz</a>
-        <a href="randevual.html" class="btn btn-link btn-hover-color ms-3">Randevu Al</a>
-        <a class="btn btn-primary"
-           href="giris.html"
-           style="margin-left:25px;border-radius:15px">
-          Giriş Yap
+        <a class="navbar-brand" href="#" style="color:#0360AD;font-family:monospace;">
+          <img src="../assets/images/logos/koyumaviesit.png" style="height:80px;width:80px;border-radius:100%;margin-right:30px;margin-left:100px;">
+          Randevum
         </a>
-      </form>
-    </div>
 
-  </div>
-</nav>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-
-  <div class="container-fluid">
-    
-
-
-    <div class="row" style="text-align: center">
-      <div class="col-12">
-        <img src="..\assets\images\photos\notdefteribg.png" style="width: 80px; height: 80px; border-radius: 100%; margin-top: 90px">
-        <p style="color: #0360AD; font-size: 20px; margin-top: 20px"> Online Randevu Al </p>
-        <p style="opacity: 0.8; font-size: 18px"> Aşağıdaki formu doldurarak randevunuzu oluşturun </p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-12" style=" text-align: center"> <p style="font-size: 15px; margin-right: 500px; margin-top: 50px"> <img src="..\assets\images\photos\adam.png" style="width: 30px; height: 30px;"> Kişisel Bilgiler </p> </div>
-    </div>
-
-    <div class="row" style="padding-top: 30px">
-      <div class="col-6">
-        <div style="float: right">
-          <p style="text-align: center; margin-right: 270px"> Ad </p>
-          <div class="input-group mb-3" style="width: 300px; margin: auto">
-        <input type="text" class="form-control" placeholder="Adınız" aria-label="Username" aria-describedby="basic-addon1">
-      </div>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+          <form class="d-flex align-items-center" role="search" style="margin-right:5.5%;margin-bottom:6px">
+            <a href="../index.html" class="btn btn-link btn-hover-color ms-3">Anasayfa</a>
+            <a href="hakkimda.html" class="btn btn-link btn-hover-color ms-3">Hakkımda</a>
+            <a href="birimlerimiz.html" class="btn btn-link btn-hover-color ms-3">Birimlerimiz</a>
+            <a href="randevual.html" class="btn btn-link btn-hover-color ms-3">Randevu Al</a>
+            <a class="btn btn-primary" href="giris.html" style="margin-left:25px;border-radius:15px">Giriş Yap</a>
+          </form>
         </div>
       </div>
-       <div class="col-6">
-        <div style="float: left">
-          <p style="text-align: center; margin-right: 250px"> Soyad </p>
-          <div class="input-group mb-3" style="width: 300px; margin: auto">
-        <input type="text" class="form-control" placeholder="Soyadınız" aria-label="Username" aria-describedby="basic-addon1">
-      </div>
-        </div>
-      </div>
-    </div>
+    </nav>
 
-     <div class="row" style="padding-top: 5px">
-      <div class="col-6">
-        <div style="float: right">
-          <p style="text-align: center; margin-right: 200px"> TC Kimlik No </p>
-          <div class="input-group mb-3" style="width: 300px; margin: auto">
-        <input type="text" class="form-control" placeholder="Örneğin; 12345678901" aria-label="Username" aria-describedby="basic-addon1">
-      </div>
-        </div>
-      </div>
-       <div class="col-6">
-        <div style="float: left">
-          <p style="text-align: center; margin-right: 240px"> Telefon </p>
-          <div class="input-group mb-3" style="width: 300px; margin: auto">
-        <input type="text" class="form-control" placeholder="Örneğin: 0555 123 45 67" aria-label="Username" aria-describedby="basic-addon1">
-      </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row" style="padding-top: 5px">
-      <div class="col-12">
-        <div style="">
-          <p style="text-align: center; margin-right: 560px"> E-posta </p>
-          <div class="input-group mb-3" style="width: 620px; margin: auto">
-        <input type="text" class="form-control" placeholder="ornek@email.com" aria-label="Username" aria-describedby="basic-addon1">
-      </div>
-        </div>
-      </div>
-    </div>
-
-
-
-
-
-
-
-
-
-    <div class="row">
-      <div class="col-12" style=" text-align: center"> <p style="font-size: 15px; margin-right: 500px; margin-top: 50px"> <img src="..\assets\images\photos\notdefteri.png" style="width: 30px; height: 30px; padding-bottom: 2px"> Kişisel Bilgiler </p> </div>
-    </div>
-
-    <div class="row" style="padding-top: 5px">
-      <div class="col-6">
-        <div style="float: right">
-          <p style="text-align: center; margin-right: 245px"> Bölüm </p>
-          <div class="input-group mb-3" style="width: 300px">
-  <select class="form-select" id="inputGroupSelect02">
-    <option selected>Bölüm Seçiniz...</option>
-    <option value="1">Dahiliye</option>
-    <option value="2">Kardiyoloji</option>
-    <option value="3">Nöroloji</option>
-    <option value="4">Ortopedi</option>
-    <option value="5">Göz Hastalıkları</option>
-    <option value="6">Kulak Burun Boğaz</option>
-    <option value="7">Genel Cerrahi</option>
-    <option value="8">Çocuk Sağlığı</option>
-    <option value="9">Dermatoloji</option>
-    <option value="10">Radyoloji</option>
-    <option value="11">Psikiyatri</option>
-    <option value="12">Diş Hastalıkları</option>
-  </select>
-</div>
-        </div>
-      </div>
-       
-       <div class="col-6">
-        <div style="float: left">
-          <p style="text-align: center; margin-right: 245px"> Doktor </p>
-          <div class="input-group mb-3" style="width: 300px">
-  <select class="form-select" id="inputGroupSelect02">
-    <option selected>Doktor Seçiniz...</option>
-  </select>
-</div>
+    <div class="container-fluid">
+      <div class="row" style="text-align: center">
+        <div class="col-12">
+          <img src="..\assets\images\photos\notdefteribg.png" style="width: 80px; height: 80px; border-radius: 100%; margin-top: 90px">
+          <p style="color: #0360AD; font-size: 20px; margin-top: 20px"> Online Randevu Al </p>
+          <p style="opacity: 0.8; font-size: 18px"> Aşağıdaki formu doldurarak randevunuzu oluşturun </p>
         </div>
       </div>
 
-
-
-    </div>
-
-
-
-    <div class="row" style="padding-top: 5px">
-      <div class="col-6">
-        <div style="float: right">
-          <p style="text-align: center; margin-right: 255px"> Tarih </p>
-          <div class="input-group mb-3" style="width: 300px; margin: auto">
-        <input type="text" class="form-control" placeholder="gg/aa/yyyy" aria-label="Username" aria-describedby="basic-addon1">
-      </div>
+      <!-- Kişisel Bilgiler -->
+      <div class="row">
+        <div class="col-12" style="text-align: center">
+          <p style="font-size: 15px; margin-right: 500px; margin-top: 50px">
+            <img src="..\assets\images\photos\adam.png" style="width: 30px; height: 30px;"> Kişisel Bilgiler
+          </p>
         </div>
       </div>
-       <div class="col-6">
-        <div style="float: left">
-          <p style="text-align: center; margin-right: 255px"> Saat </p>
-          <div class="input-group mb-3" style="width: 300px">
-  <select class="form-select" id="inputGroupSelect02">
-    <option selected>Saat Seçiniz...</option>
-    <option value="1">09:00</option>
-    <option value="2">09:30</option>
-    <option value="3">10:00</option>
-    <option value="4">10:30</option>
-    <option value="5">11:00</option>
-    <option value="6">11:30</option>
-    <option value="7">12:00</option>
-    <option value="8">15:00</option>
-    <option value="9">15:30</option>
-    <option value="10">16:00</option>
-  </select>
-</div>
+
+      <div class="row" style="padding-top: 30px">
+        <div class="col-6">
+          <div style="float: right; margin:auto;">
+            <p style="text-align: left;"> Ad </p>
+            <div class="input-group mb-3" style="width: 300px; margin:auto;">
+              <input type="text" class="form-control" placeholder="Adınız" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div style="float: left; margin:auto;">
+            <p style="text-align: left;"> Soyad </p>
+            <div class="input-group mb-3" style="width: 300px; margin:auto;">
+              <input type="text" class="form-control" placeholder="Soyadınız" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+          </div>
         </div>
       </div>
-    </div>
 
-
-<div class="row">
-      <div class="col-12" style=" text-align: center"> <p style="font-size: 15px; margin-right: 475px; margin-top: 50px"> <img src="..\assets\images\photos\yazi.png" style="width: 30px; height: 30px;"> Notlar (Opsiyonel) </p> </div>
-    </div>
-
-
-    <div class="row">
-      <div class="col-12">
-        <div class="form-floating" style="width: 620px; margin: auto">
-          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-          <label for="floatingTextarea2">Notunuz</label>
+      <div class="row" style="padding-top: 5px">
+        <div class="col-6">
+          <div style="float: right; margin:auto;">
+            <p style="text-align: left;"> TC Kimlik No </p>
+            <div class="input-group mb-3" style="width: 300px; margin:auto;">
+              <input type="text" class="form-control" placeholder="Örneğin; 12345678901" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div style="float: left; margin:auto;">
+            <p style="text-align: left;"> Telefon </p>
+            <div class="input-group mb-3" style="width: 300px; margin:auto;">
+              <input type="text" class="form-control" placeholder="Örneğin: 0555 123 45 67" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="row" style="padding-bottom: 50px">
-      <div class="col-12" style="text-align: center; padding-top: 40px">
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 500px">
-  Randevu Oluştur
-</button>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel"> <img src="..\assets\images\logos\koyumaviesit.png" style="width: 40px; height: 40px; margin-right: 40px"> Randevunuz başarıyla oluşturuldu! </h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" style="margin: auto" data-bs-dismiss="modal">Kapat</button>
-      </div>
+      <div class="row" style="padding-top: 5px">
+  <div class="col-12 d-flex justify-content-center">
+    <div style="max-width: 620px; width: 100%;">
+      <p style="margin-bottom: 5px; padding-left: 5px;">E-posta</p>
+      <input type="text" class="form-control" placeholder="ornek@email.com" aria-label="Username" aria-describedby="basic-addon1">
     </div>
   </div>
 </div>
-        
+
+      <!-- Randevu Bilgileri -->
+      <div class="row">
+        <div class="col-12" style="text-align: center">
+          <p style="font-size: 15px; margin-right: 470px; margin-top: 50px">
+            <img src="..\assets\images\photos\notdefteri.png" style="width: 30px; height: 30px; padding-bottom: 2px"> Randevu Bilgileri
+          </p>
+        </div>
       </div>
+
+      <div class="row" style="padding-top: 5px">
+        <div class="col-6">
+          <div style="float: right; margin:auto;">
+            <p style="text-align: left;"> Bölüm </p>
+            <div class="input-group mb-3" style="width: 300px;">
+              <select class="form-select" id="inputGroupSelect02">
+                <option selected>Bölüm Seçiniz...</option>
+                <option value="1">Dahiliye</option>
+                <option value="2">Kardiyoloji</option>
+                <option value="3">Nöroloji</option>
+                <option value="4">Ortopedi</option>
+                <option value="5">Göz Hastalıkları</option>
+                <option value="6">Kulak Burun Boğaz</option>
+                <option value="7">Genel Cerrahi</option>
+                <option value="8">Çocuk Sağlığı</option>
+                <option value="9">Dermatoloji</option>
+                <option value="10">Radyoloji</option>
+                <option value="11">Psikiyatri</option>
+                <option value="12">Diş Hastalıkları</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div style="float: left; margin:auto;">
+            <p style="text-align: left;"> Doktor </p>
+            <div class="input-group mb-3" style="width: 300px;">
+              <select class="form-select" id="inputGroupSelect02">
+                <option selected>Doktor Seçiniz...</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="padding-top: 5px">
+        <div class="col-6">
+          <div style="float: right; margin:auto;">
+            <p style="text-align: left;"> Tarih </p>
+            <div class="input-group mb-3" style="width: 300px; margin:auto;">
+              <input type="text" class="form-control" placeholder="gg/aa/yyyy" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div style="float: left; margin:auto;">
+            <p style="text-align: left;"> Saat </p>
+            <div class="input-group mb-3" style="width: 300px;">
+              <select class="form-select" id="inputGroupSelect02">
+                <option selected>Saat Seçiniz...</option>
+                <option value="1">09:00</option>
+                <option value="2">09:30</option>
+                <option value="3">10:00</option>
+                <option value="4">10:30</option>
+                <option value="5">11:00</option>
+                <option value="6">11:30</option>
+                <option value="7">12:00</option>
+                <option value="8">15:00</option>
+                <option value="9">15:30</option>
+                <option value="10">16:00</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Notlar -->
+      <div class="row">
+        <div class="col-12" style="text-align: center">
+          <p style="font-size: 15px; margin-right: 475px; margin-top: 50px">
+            <img src="..\assets\images\photos\yazi.png" style="width: 30px; height: 30px;"> Notlar (Opsiyonel)
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="form-floating" style="width: 620px; margin:auto;">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+            <label for="floatingTextarea2">Notunuz</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="padding-bottom: 50px">
+        <div class="col-12" style="text-align: center; padding-top: 40px">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 500px">
+            Randevu Oluştur
+          </button>
+
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    <img src="..\assets\images\logos\koyumaviesit.png" style="width: 40px; height: 40px; margin-right: 40px">
+                    Randevunuz başarıyla oluşturuldu!
+                  </h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" style="margin: auto" data-bs-dismiss="modal">Kapat</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <hr>
+
     </div>
-
-    <hr>
-
-
-
-
-
-
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
