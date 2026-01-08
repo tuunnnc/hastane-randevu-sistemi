@@ -90,33 +90,110 @@
           margin-left: 20px !important;
         }
       }
+      .navbar {
+  height: 100px;
+  width: 100%;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+@media (max-width: 991px) {
+
+  .navbar-collapse {
+    background: #fff;
+    padding: 15px 0;
+  }
+
+  .navbar-nav,
+  .navbar-collapse form {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  .navbar-collapse a {
+    margin: 8px 0 !important;
+    font-size: 16px;
+  }
+
+  .navbar-collapse .btn-primary {
+    width: 90%;
+    margin: 12px 0 0 0 !important;
+    border-radius: 12px;
+  }
+
+@media (max-width: 991px) {
+
+  .navbar-collapse {
+    background: #fff;
+    padding: 15px 0;
+  }
+
+  .navbar-nav,
+  .navbar-collapse form {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  .navbar-collapse a {
+    margin: 8px 0 !important;
+    font-size: 16px;
+  }
+
+  .navbar-collapse .btn-primary {
+    width: 90%;
+    margin: 12px 0 0 0 !important;
+    border-radius: 12px;
+  }
+}
     </style>
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-lg sticky-top bg-white" style="box-shadow: 0 8px 25px rgba(0,0,0,0.2)">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#" style="color:#0360AD;font-family:monospace;">
-          <img src="../assets/images/logos/koyumaviesit.png"
-               style="height:80px;width:80px;border-radius:100%;margin-right:30px;margin-left:100px;">
-          Randevum
+    <nav class="navbar navbar-expand-lg sticky-top bg-white"
+     style="box-shadow: 0 8px 25px rgba(0,0,0,0.2)">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="#" style="color:#0360AD;font-family:monospace;">
+      <img src="../assets/images/logos/koyumaviesit.png"
+           style="height:80px;width:80px;border-radius:100%;margin-right:30px;margin-left:100px;">
+      Randevum
+    </a>
+
+
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+      <form class="d-flex align-items-center" role="search"
+            style="margin-right:5.5%;margin-bottom:6px">
+        <a href="../index.html" class="btn btn-link btn-hover-color ms-3">Anasayfa</a>
+        <a href="hakkimda.html" class="btn btn-link btn-hover-color ms-3">Hakkımda</a>
+        <a href="birimlerimiz.html" class="btn btn-link btn-hover-color ms-3">Birimlerimiz</a>
+        <a href="randevual.html" class="btn btn-link btn-hover-color ms-3">Randevu Al</a>
+        <a class="btn btn-primary"
+           href="giris.html"
+           style="margin-left:25px;border-radius:15px">
+          Giriş Yap
         </a>
+      </form>
+    </div>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
-          <form class="d-flex align-items-center" role="search" style="margin-right:5.5%;margin-bottom:6px">
-            <a href="../index.html" class="btn btn-link btn-hover-color ms-3">Anasayfa</a>
-            <a href="hakkimda.html" class="btn btn-link btn-hover-color ms-3">Hakkımda</a>
-            <a href="birimlerimiz.html" class="btn btn-link btn-hover-color ms-3">Birimlerimiz</a>
-            <a href="randevual.html" class="btn btn-link btn-hover-color ms-3">Randevu Al</a>
-            <a class="btn btn-primary" href="giris.html" style="margin-left:25px;border-radius:15px">Giriş Yap</a>
-          </form>
-        </div>
-      </div>
-    </nav>
+  </div>
+</nav>
 
     <div class="container-fluid">
       <div class="row">
