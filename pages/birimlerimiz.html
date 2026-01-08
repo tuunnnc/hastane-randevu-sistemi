@@ -3,403 +3,270 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Birimlerimiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/css" href="..\assets\images\logos\koyumaviesit.png">
 
     <style>
-       .btn-hover-color {
-      color: #000 !important;
-      transition: color 200ms ease;
-      text-decoration: none;
-    }
-    .btn-hover-color:hover,
-    .btn-hover-color:focus,
-    .btn-hover-color:active {
-      color: #0360AD !important;
-      text-decoration: none;
-    }
+      .btn-hover-color {
+        color: #000 !important;
+        transition: color 200ms ease;
+        text-decoration: none;
+      }
+      .btn-hover-color:hover,
+      .btn-hover-color:focus,
+      .btn-hover-color:active {
+        color: #0360AD !important;
+        text-decoration: none;
+      }
 
-    .navbar {
-      height: 100px;
-      width: 100%;
-    }
+      .navbar {
+        height: 100px;
+        width: 100%;
+      }
 
-    .button {
-      color: #0360AD !important;
-      transition: color 200ms ease;
-      text-decoration: none;
-    }
+      .button {
+        color: #0360AD !important;
+        transition: color 200ms ease;
+        text-decoration: none;
+      }
 
-@media (max-width: 992px) {
+      .kart {
+        background-color: white;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+        border-radius: 20px;
+        padding: 15px;
+        margin-top: 50px;
+        width: 100%;
+        max-width: 320px; 
+        height: auto;
+      }
 
+      .kart img {
+        width: 48px; 
+        height: 48px; 
+        border-radius: 15px;
+        margin-left: 6%;
+      }
 
-  .navbar {
-    height: auto;
-    padding: 10px 0;
-  }
+      .kart h5 {
+        margin-top: 10px;
+        margin-left: 20px;
+      }
 
-  .navbar-brand img {
-    margin-left: 10px !important;
-    margin-right: 10px !important;
-  }
+      .kart p {
+        opacity: 0.9;
+        padding-left: 20px;
+        margin-bottom: 15px;
+      }
 
-  .navbar form {
-    margin-right: 0 !important;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+      .kart span {
+        opacity: 0.7;
+        padding-left: 20px;
+        display: inline-block;
+        margin-top: 5px;
+      }
 
+      .kart a.button {
+        margin-left: 20px;
+        display: inline-block;
+      }
 
-  .row > .col-12[style*="padding-left: 350px"] {
-    padding-left: 30px !important;
-    padding-right: 30px !important;
-    text-align: center;
-  }
-
-
-  .col-3 {
-    width: 100% !important;
-    display: flex;
-    justify-content: center;
-  }
-
-
-  .kart {
-    margin-left: 0 !important;
-    width: 90% !important;
-    height: auto !important;
-  }
-
-  .kart p {
-    padding-right: 15px;
-  }
-}
-
-
-@media (max-width: 576px) {
-
-  h4 {
-    font-size: 20px;
-    text-align: center;
-  }
-
-  p {
-    font-size: 15px;
-    text-align: center;
-  }
-
-
-  .kart h5,
-  .kart p,
-  .kart span {
-    text-align: left;
-  }
-
-  .kart a {
-    margin-left: 20px !important;
-  }
-
-
-  .row .btn {
-    width: 90% !important;
-    margin: 10px auto !important;
-    display: block;
-  }
-}
-
-@media (max-width: 991px) {
-
-  .navbar-collapse {
-    background: #fff;
-    padding: 15px 0;
-  }
-
-  .navbar-nav,
-  .navbar-collapse form {
-    flex-direction: column !important;
-    align-items: center !important;
-    width: 100%;
-    margin: 0 !important;
-  }
-
-  .navbar-collapse a {
-    margin: 8px 0 !important;
-    font-size: 16px;
-  }
-
-  .navbar-collapse .btn-primary {
-    width: 90%;
-    margin: 12px 0 0 0 !important;
-    border-radius: 12px;
-  }
-
-@media (max-width: 991px) {
-
-  .navbar-collapse {
-    background: #fff;
-    padding: 15px 0;
-  }
-
-  .navbar-nav,
-  .navbar-collapse form {
-    flex-direction: column !important;
-    align-items: center !important;
-    width: 100%;
-    margin: 0 !important;
-  }
-
-  .navbar-collapse a {
-    margin: 8px 0 !important;
-    font-size: 16px;
-  }
-
-  .navbar-collapse .btn-primary {
-    width: 90%;
-    margin: 12px 0 0 0 !important;
-    border-radius: 12px;
-  }
-}
-
+      @media (max-width: 576px) {
+        h4 {
+          font-size: 20px;
+          text-align: center;
+        }
+        p {
+          font-size: 15px;
+          text-align: center;
+        }
+        .kart h5,
+        .kart p,
+        .kart span {
+          text-align: left;
+        }
+        .kart a {
+          margin-left: 20px !important;
+        }
+      }
     </style>
-
-
-
-
-
-
-
-
   </head>
   <body>
-    
 
-
-      <nav class="navbar navbar-expand-lg sticky-top bg-white"
-     style="box-shadow: 0 8px 25px rgba(0,0,0,0.2)">
-  <div class="container-fluid">
-
-    <a class="navbar-brand" href="#" style="color:#0360AD;font-family:monospace;">
-      <img src="../assets/images/logos/koyumaviesit.png"
-           style="height:80px;width:80px;border-radius:100%;margin-right:30px;margin-left:100px;">
-      Randevum
-    </a>
-
-    <!-- HAMBURGER -->
-    <button class="navbar-toggler" type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- COLLAPSE -->
-    <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
-      <form class="d-flex align-items-center" role="search"
-            style="margin-right:5.5%;margin-bottom:6px">
-        <a href="../index.html" class="btn btn-link btn-hover-color ms-3">Anasayfa</a>
-        <a href="hakkimda.html" class="btn btn-link btn-hover-color ms-3">Hakkımda</a>
-        <a href="birimlerimiz.html" class="btn btn-link btn-hover-color ms-3">Birimlerimiz</a>
-        <a href="randevual.html" class="btn btn-link btn-hover-color ms-3">Randevu Al</a>
-        <a class="btn btn-primary"
-           href="giris.html"
-           style="margin-left:25px;border-radius:15px">
-          Giriş Yap
+    <nav class="navbar navbar-expand-lg sticky-top bg-white" style="box-shadow: 0 8px 25px rgba(0,0,0,0.2)">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" style="color:#0360AD;font-family:monospace;">
+          <img src="../assets/images/logos/koyumaviesit.png"
+               style="height:80px;width:80px;border-radius:100%;margin-right:30px;margin-left:100px;">
+          Randevum
         </a>
-      </form>
-    </div>
 
-  </div>
-</nav>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+          <form class="d-flex align-items-center" role="search" style="margin-right:5.5%;margin-bottom:6px">
+            <a href="../index.html" class="btn btn-link btn-hover-color ms-3">Anasayfa</a>
+            <a href="hakkimda.html" class="btn btn-link btn-hover-color ms-3">Hakkımda</a>
+            <a href="birimlerimiz.html" class="btn btn-link btn-hover-color ms-3">Birimlerimiz</a>
+            <a href="randevual.html" class="btn btn-link btn-hover-color ms-3">Randevu Al</a>
+            <a class="btn btn-primary" href="giris.html" style="margin-left:25px;border-radius:15px">Giriş Yap</a>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12" style="background: linear-gradient(90deg,rgba(23, 61, 130, 1) 0%, rgba(41, 118, 163, 1) 99%); color: white;">
+          <h4 style="padding-left: 10%; padding-top: 70px">Birimlerimiz</h4>
+          <p style="font-size: 17px; padding-left: 10%; padding-bottom: 70px">
+            15 farklı tıbbi bölümde uzman doktorlarımız ile hizmet veriyoruz. Modern ekipmanlarımız ve deneyimli kadromuz ile <br> sağlığınız için buradayız.
+          </p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
 
 
-  <div class="container-fluid">
 
-    <div class="row">
-      <div class="col-12" style="background: linear-gradient(90deg,rgba(23, 61, 130, 1) 0%, rgba(41, 118, 163, 1) 99%); color: white;"> <h4 style="padding-left: 350px; padding-top: 70px"> Birimlerimiz </h4>
-      <p style="font-size: 17px; padding-left: 350px; padding-bottom: 70px"> 15 farklı tıbbi bölümde uzman doktorlarımız ile hizmet veriyoruz. Modern ekipmanlarımız ve deneyimli kadromuz ile </br> sağlığınız için buradayız. </p> </div>
-    </div>
-
-
-
-    <div class="row">
-       <div class="col-3">
-          <div class="kart" style="width: 360px; height: 230px; background-color: white; box-shadow: 0 8px 25px rgba(0,0,0,0.5); border-radius: 20px; margin-left: 270px; margin-top: 70px">
-            <img src="..\assets\images\photos\dahiliye.png" style="width: 50px; height: 50px; margin-top: 20px; margin-left: 20px; border-radius: 15px">
-            <h5 style="margin-top: 10px; margin-left: 20px;"> Dahiliye </h5>
-            <p style="opacity: 0.9; padding-left: 20px; margin-bottom: 15px"> İç hastalıkları teşhis ve tedavisi. Şeker hastalığı, tansiyon gibi kronik hastalıkların takibi. </p>
-            <span style="opacity: 0.7; padding-left: 20px; display: inline-block; margin-top: 5px"> 3 Uzman Doktor </span>
-            <a href="randevual.html" class="btn btn-link button" style="margin-right: 10px; position: relative; margin-left: 85px"> Randevu Al → </a>
+        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+          <div class="kart">
+            <img src="../assets/images/photos/dahiliye.png">
+            <h5>Dahiliye</h5>
+            <p>İç hastalıkları teşhis ve tedavisi. Şeker hastalığı, tansiyon gibi kronik hastalıkların takibi.</p>
+            <span>3 Uzman Doktor</span>
+            <a href="randevual.html" class="btn btn-link button">Randevu Al →</a>
           </div>
         </div>
 
-        <div class="col-3">
-          <div class="kart" style="width: 360px; height: 230px; background-color: white; box-shadow: 0 8px 25px rgba(0,0,0,0.5); border-radius: 20px; margin-left: 270px; margin-top: 70px">
-            <img src="..\assets\images\photos\kardiyoloji.png" style="width: 50px; height: 50px; margin-top: 20px; margin-left: 20px; border-radius: 15px">
-            <h5 style="margin-top: 10px; margin-left: 20px;"> Kardiyoloji </h5>
-            <p style="opacity: 0.9; padding-left: 20px; margin-bottom: 15px"> Kalp ve damar hastalıklarının teşhis ve tedavisi. EKG, ekokardiyografi ve stres testleri. </p>
-            <span style="opacity: 0.7; padding-left: 20px; display: inline-block; margin-top: 5px"> 4 Uzman Doktor </span>
-            <a href="randevual.html" class="btn btn-link button" style="margin-right: 10px; position: relative; margin-left: 85px"> Randevu Al → </a>
+        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+          <div class="kart">
+            <img src="../assets/images/photos/kardiyoloji.png">
+            <h5>Kardiyoloji</h5>
+            <p>Kalp ve damar hastalıklarının teşhis ve tedavisi. EKG, ekokardiyografi ve stres testleri.</p>
+            <span>4 Uzman Doktor</span>
+            <a href="randevual.html" class="btn btn-link button">Randevu Al →</a>
           </div>
         </div>
 
-        <div class="col-3">
-          <div class="kart" style="width: 360px; height: 230px; background-color: white; box-shadow: 0 8px 25px rgba(0,0,0,0.5); border-radius: 20px; margin-left: 270px; margin-top: 70px">
-            <img src="..\assets\images\photos\noroloji.png" style="width: 50px; height: 50px; margin-top: 20px; margin-left: 20px; border-radius: 15px">
-            <h5 style="margin-top: 10px; margin-left: 20px;"> Nöroloji </h5>
-            <p style="opacity: 0.9; padding-left: 20px; margin-bottom: 15px"> Beyin ve sinir sistemi hastalıklarının tedavisi. Migren, epilepsi, MS gibi hastalıklar. </p>
-            <span style="opacity: 0.7; padding-left: 20px; display: inline-block; margin-top: 5px"> 3 Uzman Doktor </span>
-            <a href="randevual.html" class="btn btn-link button" style="margin-right: 10px; position: relative; margin-left: 85px"> Randevu Al → </a>
-          </div>
-        </div>
-    </div>
-
-
-
-
-
-    <div class="row">
-       <div class="col-3">
-          <div class="kart" style="width: 360px; height: 230px; background-color: white; box-shadow: 0 8px 25px rgba(0,0,0,0.5); border-radius: 20px; margin-left: 270px; margin-top: 70px">
-            <img src="..\assets\images\photos\ortopedi.png" style="width: 50px; height: 50px; margin-top: 20px; margin-left: 20px; border-radius: 15px">
-            <h5 style="margin-top: 10px; margin-left: 20px;"> Ortopedi </h5>
-            <p style="opacity: 0.9; padding-left: 20px; margin-bottom: 15px"> Kemik, eklem ve kas hastalıkları. Kırık, çıkık tedavileri ve ortopedik cerrahi. </p>
-            <span style="opacity: 0.7; padding-left: 20px; display: inline-block; margin-top: 5px"> 4 Uzman Doktor </span>
-            <a href="randevual.html" class="btn btn-link button" style="margin-right: 10px; position: relative; margin-left: 85px"> Randevu Al → </a>
+        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+          <div class="kart">
+            <img src="../assets/images/photos/noroloji.png">
+            <h5>Nöroloji</h5>
+            <p>Beyin ve sinir sistemi hastalıklarının tedavisi. Migren, epilepsi, MS gibi hastalıklar.</p>
+            <span>3 Uzman Doktor</span>
+            <a href="randevual.html" class="btn btn-link button">Randevu Al →</a>
           </div>
         </div>
 
-        <div class="col-3">
-          <div class="kart" style="width: 360px; height: 230px; background-color: white; box-shadow: 0 8px 25px rgba(0,0,0,0.5); border-radius: 20px; margin-left: 270px; margin-top: 70px">
-            <img src="..\assets\images\photos\gozhastaliklari.png" style="width: 50px; height: 50px; margin-top: 20px; margin-left: 20px; border-radius: 15px">
-            <h5 style="margin-top: 10px; margin-left: 20px;"> Göz Hastalıkları </h5>
-            <p style="opacity: 0.9; padding-left: 20px; margin-bottom: 15px"> Göz muayenesi, katarakt ameliyatı, gözlük reçetesi ve göz hastalıkları tedavisi. </p>
-            <span style="opacity: 0.7; padding-left: 20px; display: inline-block; margin-top: 5px"> 2 Uzman Doktor </span>
-            <a href="randevual.html" class="btn btn-link button" style="margin-right: 10px; position: relative; margin-left: 85px"> Randevu Al → </a>
+        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+          <div class="kart">
+            <img src="../assets/images/photos/ortopedi.png">
+            <h5>Ortopedi</h5>
+            <p>Kemik, eklem ve kas hastalıkları. Kırık, çıkık tedavileri ve ortopedik cerrahi.</p>
+            <span>4 Uzman Doktor</span>
+            <a href="randevual.html" class="btn btn-link button">Randevu Al →</a>
           </div>
         </div>
 
-        <div class="col-3">
-          <div class="kart" style="width: 360px; height: 230px; background-color: white; box-shadow: 0 8px 25px rgba(0,0,0,0.5); border-radius: 20px; margin-left: 270px; margin-top: 70px">
-            <img src="..\assets\images\photos\kkb.png" style="width: 50px; height: 50px; margin-top: 20px; margin-left: 20px; border-radius: 15px">
-            <h5 style="margin-top: 10px; margin-left: 20px;"> Kulak Burun Boğaz </h5>
-            <p style="opacity: 0.9; padding-left: 20px; margin-bottom: 15px"> KBB hastalıklarının teşhis ve tedavisi. Burun estetiği, bademcik ameliyatları. </p>
-            <span style="opacity: 0.7; padding-left: 20px; display: inline-block; margin-top: 5px"> 3 Uzman Doktor </span>
-            <a href="randevual.html" class="btn btn-link button" style="margin-right: 10px; position: relative; margin-left: 85px"> Randevu Al → </a>
-          </div>
-        </div>
-    </div>
-
-    <div class="row">
-       <div class="col-3">
-          <div class="kart" style="width: 360px; height: 230px; background-color: white; box-shadow: 0 8px 25px rgba(0,0,0,0.5); border-radius: 20px; margin-left: 270px; margin-top: 70px">
-            <img src="..\assets\images\photos\genelcerrahi.png" style="width: 50px; height: 50px; margin-top: 20px; margin-left: 20px; border-radius: 15px">
-            <h5 style="margin-top: 10px; margin-left: 20px;"> Genel Cerrahi </h5>
-            <p style="opacity: 0.9; padding-left: 20px; margin-bottom: 15px"> Karın cerrahisi, fıtık, apandisit ameliyatları ve genel cerrahi müdahaleler. </p>
-            <span style="opacity: 0.7; padding-left: 20px; display: inline-block; margin-top: 5px"> 3 Uzman Doktor </span>
-            <a href="randevual.html" class="btn btn-link button" style="margin-right: 10px; position: relative; margin-left: 85px"> Randevu Al → </a>
+        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+          <div class="kart">
+            <img src="../assets/images/photos/gozhastaliklari.png">
+            <h5>Göz Hastalıkları</h5>
+            <p>Göz muayenesi, katarakt ameliyatı, gözlük reçetesi ve göz hastalıkları tedavisi.</p>
+            <span>2 Uzman Doktor</span>
+            <a href="randevual.html" class="btn btn-link button">Randevu Al →</a>
           </div>
         </div>
 
-        <div class="col-3">
-          <div class="kart" style="width: 360px; height: 230px; background-color: white; box-shadow: 0 8px 25px rgba(0,0,0,0.5); border-radius: 20px; margin-left: 270px; margin-top: 70px">
-            <img src="..\assets\images\photos\cocuksagligi.png" style="width: 50px; height: 50px; margin-top: 20px; margin-left: 20px; border-radius: 15px">
-            <h5 style="margin-top: 10px; margin-left: 20px;"> Çocuk Sağlığı </h5>
-            <p style="opacity: 0.9; padding-left: 20px; margin-bottom: 15px"> Bebek ve çocuk hastalıkları, aşı takibi, büyüme gelişim kontrolü. </p>
-            <span style="opacity: 0.7; padding-left: 20px; display: inline-block; margin-top: 5px"> 5 Uzman Doktor </span>
-            <a href="randevual.html" class="btn btn-link button" style="margin-right: 10px; position: relative; margin-left: 85px"> Randevu Al → </a>
+        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+          <div class="kart">
+            <img src="../assets/images/photos/kkb.png">
+            <h5>Kulak Burun Boğaz</h5>
+            <p>KBB hastalıklarının teşhis ve tedavisi. Burun estetiği, bademcik ameliyatları.</p>
+            <span>3 Uzman Doktor</span>
+            <a href="randevual.html" class="btn btn-link button">Randevu Al →</a>
           </div>
         </div>
 
-        <div class="col-3">
-          <div class="kart" style="width: 360px; height: 230px; background-color: white; box-shadow: 0 8px 25px rgba(0,0,0,0.5); border-radius: 20px; margin-left: 270px; margin-top: 70px">
-            <img src="..\assets\images\photos\dermatoloji.png" style="width: 50px; height: 50px; margin-top: 20px; margin-left: 20px; border-radius: 15px">
-            <h5 style="margin-top: 10px; margin-left: 20px;"> Dermatoloji </h5>
-            <p style="opacity: 0.9; padding-left: 20px; margin-bottom: 15px"> Cilt hastalıkları, egzama, sedef hastalığı, akne tedavisi ve cilt bakımı. </p>
-            <span style="opacity: 0.7; padding-left: 20px; display: inline-block; margin-top: 5px"> 2 Uzman Doktor </span>
-            <a href="randevual.html" class="btn btn-link button" style="margin-right: 10px; position: relative; margin-left: 85px"> Randevu Al → </a>
-          </div>
-        </div>
-    </div>
-
-
-     <div class="row">
-       <div class="col-3">
-          <div class="kart" style="width: 360px; height: 230px; background-color: white; box-shadow: 0 8px 25px rgba(0,0,0,0.5); border-radius: 20px; margin-left: 270px; margin-top: 70px">
-            <img src="..\assets\images\photos\radyoloji.png" style="width: 50px; height: 50px; margin-top: 20px; margin-left: 20px; border-radius: 15px">
-            <h5 style="margin-top: 10px; margin-left: 20px;"> Radyoloji </h5>
-            <p style="opacity: 0.9; padding-left: 20px; margin-bottom: 15px"> Görüntüleme hizmetleri: MR, BT, ultrason, mamografi ve röntgen. </p>
-            <span style="opacity: 0.7; padding-left: 20px; display: inline-block; margin-top: 5px"> 4 Uzman Doktor </span>
-            <a href="randevual.html" class="btn btn-link button" style="margin-right: 10px; position: relative; margin-left: 85px"> Randevu Al → </a>
+        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+          <div class="kart">
+            <img src="../assets/images/photos/genelcerrahi.png">
+            <h5>Genel Cerrahi</h5>
+            <p>Karın cerrahisi, fıtık, apandisit ameliyatları ve genel cerrahi müdahaleler.</p>
+            <span>3 Uzman Doktor</span>
+            <a href="randevual.html" class="btn btn-link button">Randevu Al →</a>
           </div>
         </div>
 
-        <div class="col-3">
-          <div class="kart" style="width: 360px; height: 230px; background-color: white; box-shadow: 0 8px 25px rgba(0,0,0,0.5); border-radius: 20px; margin-left: 270px; margin-top: 70px">
-            <img src="..\assets\images\photos\psikiyatri.png" style="width: 50px; height: 50px; margin-top: 20px; margin-left: 20px; border-radius: 15px">
-            <h5 style="margin-top: 10px; margin-left: 20px;"> Psikiyatri </h5>
-            <p style="opacity: 0.9; padding-left: 20px; margin-bottom: 15px"> Ruh sağlığı, depresyon, anksiyete bozuklukları ve psikoterapi. </p>
-            <span style="opacity: 0.7; padding-left: 20px; display: inline-block; margin-top: 5px"> 2 Uzman Doktor </span>
-            <a href="randevual.html" class="btn btn-link button" style="margin-right: 10px; position: relative; margin-left: 85px"> Randevu Al → </a>
+        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+          <div class="kart">
+            <img src="../assets/images/photos/cocuksagligi.png">
+            <h5>Çocuk Sağlığı</h5>
+            <p>Bebek ve çocuk hastalıkları, aşı takibi, büyüme gelişim kontrolü.</p>
+            <span>5 Uzman Doktor</span>
+            <a href="randevual.html" class="btn btn-link button">Randevu Al →</a>
           </div>
         </div>
 
-        <div class="col-3" style="padding-bottom: 75px">
-          <div class="kart" style="width: 360px; height: 230px; background-color: white; box-shadow: 0 8px 25px rgba(0,0,0,0.5); border-radius: 20px; margin-left: 270px; margin-top: 70px">
-            <img src="..\assets\images\photos\dishastaliklari.png" style="width: 50px; height: 50px; margin-top: 20px; margin-left: 20px; border-radius: 15px">
-            <h5 style="margin-top: 10px; margin-left: 20px;"> Diş Hastalıkları </h5>
-            <p style="opacity: 0.9; padding-left: 20px; margin-bottom: 15px"> Diş tedavisi, implant, kanal tedavisi, diş estetiği ve ağız sağlığı. </p>
-            <span style="opacity: 0.7; padding-left: 20px; display: inline-block; margin-top: 5px"> 3 Uzman Doktor </span>
-            <a href="randevual.html" class="btn btn-link button" style="margin-right: 10px; position: relative; margin-left: 85px"> Randevu Al → </a>
+        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+          <div class="kart">
+            <img src="../assets/images/photos/dermatoloji.png">
+            <h5>Dermatoloji</h5>
+            <p>Cilt hastalıkları, egzama, sedef hastalığı, akne tedavisi ve cilt bakımı.</p>
+            <span>2 Uzman Doktor</span>
+            <a href="randevual.html" class="btn btn-link button">Randevu Al →</a>
           </div>
         </div>
 
-
-
-        <hr>
-
-
-        <div class="row">
-          <div class="col-12" style="text-align: center; padding-bottom: ">
-            <p style="color: #0360AD; font-size: 21px; text-align: center; padding-top: 50px"> Bölümünüzü Bulamadınız Mı? </p>
-            <p style="text-align: center; opacity: 0.9"> Daha fazla bilgi almak veya özel durumlarda danışmak için bizimle iletişime geçebilirsiniz. </p>
-            <button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-bottom: 20px; width: 170px; height: 45px; padding-top: 7px; margin-top: 30px">0212 555 0000</button>
-            <a type="button" href="randevual.html" class="btn btn-outline-primary" style="margin-bottom: 20px; width: 170px; height: 45px; padding-top: 9px; margin-top: 30px;">Online Randevu</a>
+        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+          <div class="kart">
+            <img src="../assets/images/photos/radyoloji.png">
+            <h5>Radyoloji</h5>
+            <p>Görüntüleme hizmetleri: MR, BT, ultrason, mamografi ve röntgen.</p>
+            <span>4 Uzman Doktor</span>
+            <a href="randevual.html" class="btn btn-link button">Randevu Al →</a>
           </div>
         </div>
 
+        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+          <div class="kart">
+            <img src="../assets/images/photos/psikiyatri.png">
+            <h5>Psikiyatri</h5>
+            <p>Ruh sağlığı, depresyon, anksiyete bozuklukları ve psikoterapi.</p>
+            <span>2 Uzman Doktor</span>
+            <a href="randevual.html" class="btn btn-link button">Randevu Al →</a>
+          </div>
+        </div>
 
+        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+          <div class="kart">
+            <img src="../assets/images/photos/dishastaliklari.png">
+            <h5>Diş Hastalıkları</h5>
+            <p>Diş tedavisi, implant, kanal tedavisi, diş estetiği ve ağız sağlığı.</p>
+            <span>3 Uzman Doktor</span>
+            <a href="randevual.html" class="btn btn-link button">Randevu Al →</a>
+          </div>
+        </div>
 
-
-
+      </div>
+</br></br></br>
+      <hr>
+</br>
+      <div class="row">
+        <div class="col-12 text-center">
+          <p style="color: #0360AD; font-size: 21px; padding-top: 50px">Bölümünüzü Bulamadınız Mı?</p>
+          <p style="opacity: 0.9">Daha fazla bilgi almak veya özel durumlarda danışmak için bizimle iletişime geçebilirsiniz.</p>
+          <button type="button" class="btn btn-primary" style="margin-bottom: 20px; width: 170px; height: 45px; margin-top: 30px;">0212 555 0000</button>
+          <a href="randevual.html" class="btn btn-outline-primary" style="margin-bottom: 20px; width: 170px; height: 45px; margin-top: 30px;">Online Randevu</a>
+        </div>
+      </div>
 
     </div>
 
-
-
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
